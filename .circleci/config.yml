@@ -18,10 +18,9 @@ jobs:
     steps:
       - restore_cache:
           keys: 
-            - npm_packages
-      - run: |
-          - npm i
-          - npm run test
+            - "npm_packages"
+      - run: npm i
+      - run: npm run test
   analyze:
     <<: *defaults
     steps:
