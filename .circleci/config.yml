@@ -16,6 +16,7 @@ jobs:
   test:
     <<: *defaults
     steps:
+      - checkout
       - restore_cache:
           keys: 
             - "npm_packages"
@@ -24,6 +25,7 @@ jobs:
   analyze:
     <<: *defaults
     steps:
+      - checkout
       - restore_cache:
           keys: 
             - npm_packages
